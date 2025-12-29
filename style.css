@@ -12,4 +12,21 @@ button { width: 100%; padding: 12px; border: none; border-radius: 8px; cursor: p
 .btn-success { background: #48bb78; color: white; }
 .progress-container { background: #edf2f7; height: 12px; border-radius: 6px; margin-top: 15px; overflow: hidden; }
 #progress-bar { background: #4a90e2; width: 0%; height: 100%; transition: width 0.3s; }
+
 .alert-info { background: #ebf8ff; padding: 10px; border-radius: 8px; margin-bottom: 15px; }
+button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Opcional: una animación sutil cuando se habilita */
+.btn-success:not(:disabled) {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(72, 187, 120, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(72, 187, 120, 0); }
+}
