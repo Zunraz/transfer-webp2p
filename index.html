@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P Secure Transfer</title>
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Secure Transfer 🔒</h1>
+            <div id="connection-status" class="status-badge">
+                <span class="dot"></span> <span id="status-text">Esperando conexión...</span>
+            </div>
+        </header>
+
+        <div class="card id-card">
+            <p>Tu ID para recibir:</p>
+            <div class="id-display"><strong id="my-id">...</strong></div>
+        </div>
+
+        <div id="conn-section" class="card">
+            <input type="text" id="peer-id" placeholder="Pega el ID de tu amigo aquí">
+            <button id="connect-btn">Conectar con amigo</button>
+        </div>
+
+        <div id="transfer-zone" class="card" style="display:none;">
+            <div id="role-emitter">
+                <h3>📤 Enviar Archivo</h3>
+                <input type="password" id="send-key" placeholder="Clave de cifrado">
+                <input type="file" id="file-input">
+                <button id="send-btn" class="btn-primary">Encriptar y Enviar</button>
+            </div>
+
+            <div id="role-receiver" style="display:none;">
+                <div class="alert-info">
+                    <h3>📥 Archivo recibido</h3>
+                    <p id="file-info">Listo para desencriptar</p>
+                </div>
+                <input type="password" id="receive-key" placeholder="Clave de desencriptación">
+                <button id="decrypt-btn" class="btn-success">Descargar Archivo</button>
+            </div>
+
+            <div class="progress-wrapper">
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <p id="percentage">0%</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

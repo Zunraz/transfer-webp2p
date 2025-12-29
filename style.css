@@ -1,0 +1,15 @@
+body { font-family: 'Segoe UI', sans-serif; background: #f4f7f9; color: #333; display: flex; justify-content: center; padding: 40px; }
+.container { width: 100%; max-width: 450px; }
+.card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; text-align: center; }
+.status-badge { display: inline-flex; align-items: center; background: #eee; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; margin-top: 10px; }
+.status-badge.connected { background: #e6fffa; color: #2d3748; border: 1px solid #38b2ac; }
+.status-badge.connected .dot { background: #38b2ac; box-shadow: 0 0 8px #38b2ac; }
+.dot { height: 8px; width: 8px; background: #bbb; border-radius: 50%; margin-right: 8px; }
+.id-display { background: #f8f9fa; padding: 10px; border-radius: 8px; border: 1px dashed #cbd5e0; font-family: monospace; font-size: 1.2em; margin-top: 5px; }
+input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+button { width: 100%; padding: 12px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+.btn-primary { background: #4a90e2; color: white; }
+.btn-success { background: #48bb78; color: white; }
+.progress-container { background: #edf2f7; height: 12px; border-radius: 6px; margin-top: 15px; overflow: hidden; }
+#progress-bar { background: #4a90e2; width: 0%; height: 100%; transition: width 0.3s; }
+.alert-info { background: #ebf8ff; padding: 10px; border-radius: 8px; margin-bottom: 15px; }
